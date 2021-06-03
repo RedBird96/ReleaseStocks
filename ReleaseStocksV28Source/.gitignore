@@ -1,0 +1,8 @@
+packages/*
+.vs/*
+StockRanking/bin/*
+StockRanking/obj/*
+TALibraryInCSharp/bin/*
+TALibraryInCSharp/obj/*
+ToggleSwitch/bin/*
+ToggleSwitch/obj/*

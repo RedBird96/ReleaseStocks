@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C2253D6-E9AA-44A0-9F8D-EC64E1EBBF19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StockRanking</RootNamespace>
+    <AssemblyName>StockRanking</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>stockicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_test|AnyCPU'">
+    <OutputPath>bin\Release_test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_test|x86'">
+    <OutputPath>bin\x86\Release_test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_test|x64'">
+    <OutputPath>bin\x64\Release_test\</OutputPath>
+    <DefineConstants>TRACE;TESTDEV</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Empty.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB, Version=4.1.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.4.1.4\lib\net40\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.106.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.106.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.106.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TA-Lib-Core, Version=1.0.4998.21369, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TA-Lib.0.5.0.3\lib\TA-Lib-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.12.1\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCustomFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomFilter.Designer.cs">
+      <DependentUpon>AddCustomFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\BacktestCalculator.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\BenchmarkBase.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\BenchmarksCalculator.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\BlendedAdvancedBenchmark.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\BlendedBasicBenchmark.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\BlendedConfigurableBenchmark.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\BondsModelBenchmark.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\EquityBenchmark.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\EquityBondsModelBenchmark.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\IBenchmarkCalculator.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\MetricsCalculator.cs" />
+    <Compile Include="BusinessLogic\Benchmarks\SymbolBenchmark.cs" />
+    <Compile Include="BusinessLogic\CAPEModelDownloader.cs" />
+    <Compile Include="BusinessLogic\CustomRiskModelSingleton.cs" />
+    <Compile Include="BusinessLogic\DebugDataLogger.cs" />
+    <Compile Include="BusinessLogic\HtmlHelper.cs" />
+    <Compile Include="BusinessLogic\MailingGenerator.cs" />
+    <Compile Include="BusinessLogic\SPYModelDownloader.cs" />
+    <Compile Include="BusinessLogic\Utility.cs" />
+    <Compile Include="CompositeGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompositeGraph.Designer.cs">
+      <DependentUpon>CompositeGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPositions.Designer.cs">
+      <DependentUpon>EditPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BacktestResult.cs" />
+    <Compile Include="Entities\CachedFeatures.cs" />
+    <Compile Include="Entities\CachedValuesStock.cs" />
+    <Compile Include="Entities\DrawDown.cs" />
+    <Compile Include="Entities\EquationFilter.cs" />
+    <Compile Include="Entities\ETFStockInfo.cs" />
+    <Compile Include="Entities\FileBasedStock.cs" />
+    <Compile Include="Entities\FilterScore.cs" />
+    <Compile Include="Entities\GraphMetric.cs" />
+    <Compile Include="Entities\HiLoStockValue.cs" />
+    <Compile Include="Entities\IStockInfo.cs" />
+    <Compile Include="Entities\MailConfiguration.cs" />
+    <Compile Include="Entities\MailingParameters.cs" />
+    <Compile Include="Entities\SimpleIdNameStock.cs" />
+    <Compile Include="Entities\SnapshotVariation.cs" />
+    <Compile Include="Entities\SortedBindingList.cs" />
+    <Compile Include="Entities\TradeHistory.cs" />
+    <Compile Include="EquationFilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquationFilterControl.Designer.cs">
+      <DependentUpon>EquationFilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizeResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizeResult.Designer.cs">
+      <DependentUpon>OptimizeResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizeSetting.Designer.cs">
+      <DependentUpon>OptimizeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\CompositeYearsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\CompositeYearsPopup.Designer.cs">
+      <DependentUpon>CompositeYearsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\ConfigureSMTPPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\ConfigureSMTPPopup.Designer.cs">
+      <DependentUpon>ConfigureSMTPPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\EditBenchmarksPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\EditBenchmarksPopup.Designer.cs">
+      <DependentUpon>EditBenchmarksPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\EditColumnsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\EditColumnsPopup.Designer.cs">
+      <DependentUpon>EditColumnsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\FileBasedStockPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\FileBasedStockPopup.Designer.cs">
+      <DependentUpon>FileBasedStockPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\LicenseCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\LicenseCheck.Designer.cs">
+      <DependentUpon>LicenseCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\ScatterPlotPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\ScatterPlotPopup.Designer.cs">
+      <DependentUpon>ScatterPlotPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BacktestResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacktestResults.Designer.cs">
+      <DependentUpon>BacktestResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomFilter.Designer.cs">
+      <DependentUpon>CustomFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\DatabaseSingleton.cs" />
+    <Compile Include="BusinessLogic\DataUpdater.cs" />
+    <Compile Include="ParametersPopups\EditPortfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\EditPortfolio.Designer.cs">
+      <DependentUpon>EditPortfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Enums.cs" />
+    <Compile Include="Entities\Feature.cs" />
+    <Compile Include="Entities\FeatureTable.cs" />
+    <Compile Include="Entities\FeatureWeight.cs" />
+    <Compile Include="Entities\FilterConditions.cs" />
+    <Compile Include="Entities\FilterTable.cs" />
+    <Compile Include="Entities\IndustryGroup.cs" />
+    <Compile Include="Entities\PortfolioSnapshot.cs" />
+    <Compile Include="Entities\Position.cs" />
+    <Compile Include="Entities\RankingResult.cs" />
+    <Compile Include="Entities\Strategy.cs" />
+    <Compile Include="Entities\Trade.cs" />
+    <Compile Include="HeathMapColors.cs" />
+    <Compile Include="ParametersPopups\BacktestPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\BacktestPopup.Designer.cs">
+      <DependentUpon>BacktestPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\RankStocksPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\RankStocksPopup.Designer.cs">
+      <DependentUpon>RankStocksPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\StatisticsMath.cs" />
+    <Compile Include="BusinessLogic\RankingCalculator.cs" />
+    <Compile Include="ParametersPopups\SelectETFSymbolPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\SelectETFSymbolPopup.Designer.cs">
+      <DependentUpon>SelectETFSymbolPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersPopups\SelectStockPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParametersPopups\SelectStockPopUp.Designer.cs">
+      <DependentUpon>SelectStockPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceUI\PerformanceGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceUI\PerformanceGraph.Designer.cs">
+      <DependentUpon>PerformanceGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceUI\PerformanceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceUI\PerformanceTable.Designer.cs">
+      <DependentUpon>PerformanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceUI\PerformanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceUI\PerformanceReport.Designer.cs">
+      <DependentUpon>PerformanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealtimeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealtimeView.Designer.cs">
+      <DependentUpon>RealtimeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiskGraphs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiskGraphs.Designer.cs">
+      <DependentUpon>RiskGraphs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScatterPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScatterPlot.Designer.cs">
+      <DependentUpon>ScatterPlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security.cs" />
+    <Compile Include="StrategyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StrategyView.Designer.cs">
+      <DependentUpon>StrategyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\IExtradingStock.cs" />
+    <Compile Include="Entities\IStockData.cs" />
+    <Compile Include="MainPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PortfolioParameters.cs" />
+    <Compile Include="ProcessingPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProcessingPanelControl.Designer.cs">
+      <DependentUpon>ProcessingPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusinessLogic\Std.cs" />
+    <Compile Include="Entities\Stock.cs" />
+    <Compile Include="Entities\StockFundamentals.cs" />
+    <Compile Include="Entities\StockRatios.cs" />
+    <Compile Include="BusinessLogic\StockSourcesReader.cs" />
+    <Compile Include="Entities\StockValue.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="BusinessLogic\ZachsSourceReader.cs" />
+    <EmbeddedResource Include="AddCustomFilter.resx">
+      <DependentUpon>AddCustomFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompositeGraph.resx">
+      <DependentUpon>CompositeGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPositions.resx">
+      <DependentUpon>EditPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquationFilterControl.resx">
+      <DependentUpon>EquationFilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizeResult.resx">
+      <DependentUpon>OptimizeResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizeSetting.resx">
+      <DependentUpon>OptimizeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\CompositeYearsPopup.resx">
+      <DependentUpon>CompositeYearsPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\ConfigureSMTPPopup.resx">
+      <DependentUpon>ConfigureSMTPPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\EditBenchmarksPopup.resx">
+      <DependentUpon>EditBenchmarksPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\EditColumnsPopup.resx">
+      <DependentUpon>EditColumnsPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\FileBasedStockPopup.resx">
+      <DependentUpon>FileBasedStockPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\LicenseCheck.resx">
+      <DependentUpon>LicenseCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\ScatterPlotPopup.resx">
+      <DependentUpon>ScatterPlotPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacktestResults.resx">
+      <DependentUpon>BacktestResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomFilter.resx">
+      <DependentUpon>CustomFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\EditPortfolio.resx">
+      <DependentUpon>EditPortfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\BacktestPopup.resx">
+      <DependentUpon>BacktestPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\RankStocksPopup.resx">
+      <DependentUpon>RankStocksPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\SelectETFSymbolPopup.resx">
+      <DependentUpon>SelectETFSymbolPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametersPopups\SelectStockPopUp.resx">
+      <DependentUpon>SelectStockPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceUI\PerformanceGraph.resx">
+      <DependentUpon>PerformanceGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceUI\PerformanceReport.resx">
+      <DependentUpon>PerformanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceUI\PerformanceTable.resx">
+      <DependentUpon>PerformanceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealtimeView.resx">
+      <DependentUpon>RealtimeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskGraphs.resx">
+      <DependentUpon>RiskGraphs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScatterPlot.resx">
+      <DependentUpon>ScatterPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StrategyView.resx">
+      <DependentUpon>StrategyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessingPanelControl.resx">
+      <DependentUpon>ProcessingPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="StocksData\SPY.zip" />
+    <EmbeddedResource Include="StocksData\SPXU.zip" />
+    <EmbeddedResource Include="StocksData\DIA.zip" />
+    <EmbeddedResource Include="StocksData\IEF.zip" />
+    <EmbeddedResource Include="StocksData\QQQ.zip" />
+    <EmbeddedResource Include="StocksData\TLT.zip" />
+    <EmbeddedResource Include="StocksData\XLK.zip" />
+    <EmbeddedResource Include="StocksData\XLV.zip" />
+    <EmbeddedResource Include="StocksData\replacements.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TALibraryInCSharp\TALibraryInCSharp.csproj">
+      <Project>{c2671cb2-5a5a-49d6-9c43-e2f1f6a13f27}</Project>
+      <Name>TALibraryInCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToggleSwitch\ToggleSwitch.csproj">
+      <Project>{49b88ffa-f02c-4709-ba65-9f8996444ecd}</Project>
+      <Name>ToggleSwitch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FiltersSQL.txt" />
+    <EmbeddedResource Include="ReprocessRollingMedian.txt" />
+    <None Include="settingsicon.png" />
+    <None Include="printer.png" />
+    <Content Include="stockicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.SimpleEmail.3.3.100.17\analyzers\dotnet\cs\AWSSDK.SimpleEmail.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.40\build\Selenium.Chrome.WebDriver.targets')" />
+</Project>
